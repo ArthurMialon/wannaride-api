@@ -1,0 +1,14 @@
+{
+    "name": "arthurmialon/PHP08",
+    "description": "Une desc",
+    "require": {
+        "bcosca/fatfree": "~3.4",
+        "firebase/php-jwt": "~1.0"
+    },
+    "authors": [
+        {
+            "name": "Arthur mialon",
+            "email": "arthurmialon@gmail.com"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+RewriteEngine On
+
+RewriteRule ^(tmp)\/|\.ini$ - [R=404]
+
+RewriteCond %{REQUEST_FILENAME} !-l
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [L,QSA]
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization},L]
+
+# Cors
+Header always set Access-Control-Allow-Origin "*"
+Header always set Access-Control-Allow-Headers "Authorization, Origin, X-Requested-With, Content-Type, Access-Control-Allow-Origin"
+Header always set Access-Control-Allow-Methods "PUT, GET, POST, DELETE, OPTIONS"
